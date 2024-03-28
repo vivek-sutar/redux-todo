@@ -4,7 +4,7 @@ export const addTodo = (text)=>({
     type:ADD_TODO,
     payload:{text}
 })
-
+ 
 export const toggleTodo = (id)=>({
     type:TOGGLE_TODO,
     payload:{id}
@@ -30,8 +30,9 @@ export const filterTodos = (filter)=>({
     payload:{filter}
 })
 
-export const markAllCompleted = ()=>({
+export const markAllCompleted = (filter)=>({
     type:MARK_ALL_COMPLETED,
+    payload:{filter}
 })
 
 

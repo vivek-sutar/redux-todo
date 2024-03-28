@@ -12,9 +12,10 @@ import {
 const initialState = {
   todos: [],
   filter: "ALL",
-  searchTerm: null,
+  searchTerm: "",
 };
-const todoReducer = (state = initialState, action) => {
+const rootReducer = (state = initialState, action) => {
+  
   switch (action.type) {
     case ADD_TODO:
       return {
@@ -73,11 +74,12 @@ const todoReducer = (state = initialState, action) => {
       return {
         todos: state.todos,
         filter: state.filter,
-        searchTerm: state.searchTerm,
+        searchTerm: action.payload.searchTerm,
       };
     default:
       return state
   }
+  
 };
 
-export default todoReducer
+export default rootReducer

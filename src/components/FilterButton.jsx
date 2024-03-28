@@ -21,7 +21,7 @@ const FilterButton = () => {
                 </select>
             </div>
             <button className="px-2-py-1 bg-purple-500 text-white ml-2 rounded"
-                onClick={() => dispatch(markAllCompleted())}>
+                onClick={() => dispatch(markAllCompleted(currentFilter))}>
                 Mark All Completed
             </button>
         </>
